@@ -42,3 +42,24 @@ class Car {
 //         this.author = author;
 //     }
 // }
+
+class PaymentGateway{
+    processPayment(amount:number):void{
+        console.log(`Process payment of $${amount}`);  
+    }
+}
+class order{
+    private gateway : PaymentGateway;
+
+    constructor(gateway:PaymentGateway){
+        this.gateway = gateway;
+    }
+
+    checkout():void{
+        this.gateway.processPayment(100.0);
+    }
+}
+
+// Bidirectional Association
+// In a bidirectional association, both classes are aware of each other. Each class holds a reference to the other, enabling two-way communication.
+
