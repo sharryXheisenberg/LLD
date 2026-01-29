@@ -52,4 +52,11 @@ public:
 int main(){
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
+    DocumentEditor editor;
+    editor.addText("Hello, world!");
+    editor.addImage("picture.png");
+    editor.addText("This is a document editor.");
+    cout<<editor.renderDocument()<<en;
+    editor.saveToFile();
+    return 0;
 }
